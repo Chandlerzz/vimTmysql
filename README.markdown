@@ -1,8 +1,7 @@
-# fugitive.vim
+# vimTmysql
 
-Fugitive is the premier Vim plugin for Git.  Or maybe it's the premier Git
-plugin for Vim?  Either way, it's "so awesome, it should be illegal".  That's
-why it's called Fugitive.
+VimTMysql is the spcial mysql editor, which is designed for writing code in vim
+and show result in mysql-cli. 
 
 The crown jewel of Fugitive is `:Git` (or just `:G`), which calls any
 arbitrary Git command.  If you know how to use Git at the command line, you
