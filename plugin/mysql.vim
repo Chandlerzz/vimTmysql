@@ -12,8 +12,13 @@ import vmysql
 EOF
 
 fun! TestPy()
-    python3 vmysql.new_window()
+    python3 vmysql.send_message_c_l()
 endfun
+
+fun! Send_message_c_l()
+    python3 vmysql.send_message_c_l()
+endfun
+
 fun! NewWindow(nickname)
     python3 vmysql.new_window(vim.eval('a:nickname'))
 endfun

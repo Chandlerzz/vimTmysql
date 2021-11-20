@@ -1,5 +1,6 @@
 nnoremap <silent> <buffer> <localleader>c :execute "ShowCreateTable"<cr>
 xnoremap <silent> <expr> <localleader>v  QueryResult() 
+nnoremap <silent> <buffer> <c-l>  :call Send_message_c_l()<cr> 
 
 if exists("b:current_syntax")
   finish
