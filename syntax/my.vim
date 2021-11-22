@@ -1,6 +1,6 @@
 nnoremap <silent> <buffer> <localleader>c :execute "ShowCreateTable"<cr>
-xnoremap <silent> <expr> <localleader>v  QueryResult() 
-nnoremap <silent> <buffer> <c-l>  :call Send_message_c_l()<cr> 
+xnoremap <silent> <expr> <localleader>v  mysql#send_message() 
+nnoremap <silent> <buffer> <c-l>  :call mysql#send_message_c_l()<cr> 
 nnoremap <silent> <buffer> <localleader>q  :call mysql#send_message_q()<cr> 
 
 if exists("b:current_syntax")

@@ -15,7 +15,7 @@ fun! TestPy()
     python3 vmysql.send_message_c_l()
 endfun
 
-fun! Send_message_c_l()
+fun! mysql#send_message_c_l()
     python3 vmysql.send_message_c_l()
 endfun
 
@@ -27,9 +27,9 @@ fun! NewWindow(nickname)
     python3 vmysql.new_window(vim.eval('a:nickname'))
 endfun
 
-fun! QueryResult(type = '')
+fun! mysql#send_message(type = '')
   if a:type == ''
-    set opfunc=QueryResult
+    set opfunc=mysql#send_message
     return 'g@'
   endif
 
