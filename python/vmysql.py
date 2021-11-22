@@ -43,6 +43,11 @@ def send_message_c_l():
     _send_message(stmt)
 
 @panecheck
+def send_message_q():
+    stmt="q"
+    _send_message(stmt)
+
+@panecheck
 def send_message():
     stmt=vim.vars["mysql_stmt"]
     stmt = stmt.decode("utf-8")

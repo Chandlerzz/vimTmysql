@@ -19,6 +19,10 @@ fun! Send_message_c_l()
     python3 vmysql.send_message_c_l()
 endfun
 
+fun! mysql#send_message_q()
+    python3 vmysql.send_message_q()
+endfun
+
 fun! NewWindow(nickname)
     python3 vmysql.new_window(vim.eval('a:nickname'))
 endfun
