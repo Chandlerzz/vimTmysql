@@ -27,14 +27,18 @@ fun! NewWindow(nickname)
     python3 vmysql.new_window(vim.eval('a:nickname'))
 endfun
 
-fun! mysql#send_message(type = '')
+fun! mysql#send_message(type)
   if a:type == ''
     set opfunc=mysql#send_message
     return 'g@'
   endif
 
   let sel_save = &selection
-  let reg_save = getreginfo('"')
+  if has("nvim")
+      let reg_save = @@
+  else
+      let reg_save = getreginfo('"')
+  end
   let g:aaa=reg_save
   let cb_save = &clipboard
   let visual_marks_save = [getpos("'<"), getpos("'>")]

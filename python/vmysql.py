@@ -6,8 +6,9 @@ import libtmux
 from functools import update_wrapper
 import typing as t
 F = t.TypeVar("F", bound=t.Callable[..., t.Any])
-server = libtmux.Server()
-session = server.find_where({ "session_name": "mysql" })
+if os.system("tmux ls") == 0:
+    server = libtmux.Server()
+    session = server.find_where({ "session_name": "mysql" })
 
 def setupmethod(f: F) -> F:
     """Wraps a method so that it performs a check in debug mode if the
