@@ -15,6 +15,11 @@ fun! TestPy()
     python3 vmysql.send_message_c_l()
 endfun
 
+fun! mysql#send_message_create_table()
+    let w:current_table = expand("cword")
+    python3 vmysql.send_message_create_table()
+endfun
+
 fun! mysql#send_message_c_l()
     python3 vmysql.send_message_c_l()
 endfun

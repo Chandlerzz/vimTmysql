@@ -44,6 +44,12 @@ def send_message_c_l():
     _send_message(stmt)
 
 @panecheck
+def send_message_create_table():
+    sql = "show create table" + vim.eval("w:current_table") + ";"
+    self.cursor.execute("show create table "+ tableName)
+    one=self.cursor.fetchone()
+
+@panecheck
 def send_message_q():
     stmt="q"
     _send_message(stmt)
